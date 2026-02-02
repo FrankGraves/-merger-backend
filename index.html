@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./1style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="headerpfp"></div>
+      <div class="bio">
+        <div class="pfname">Ava Skye</div>
+        <div class="username">@avasecrett . Available now</div>
+        <div class="note">
+          18 private content of me <br />
+          ( i have notin on so txt mee )
+        </div>
+      </div>
+      <div class="subs">
+        <div class="subs1">
+          <div id="sub1">subscription</div>
+          <button id="openModal">
+            <div class="below">
+              <div class="sub1i">subscribe</div>
+              <div class="sub1ii">for free</div>
+            </div>
+          </button>
+        </div>
+        <div class="contents">
+          <div class="posts">posts</div>
+          <div class="media">media</div>
+        </div>
+        <div class="subs2">
+          <button id="openModal">
+            <div class="subs2i">subscribe to see user's posts</div>
+          </button>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="option">.</div>
+        <div class="home">.</div>
+      </div>
+    </div>
+
+    <!-- LOGIN OVERLAY -->
+    <div class="overlay" id="overlay">
+      <div class="modal">
+        <div class="profile">
+          <img src="https://via.placeholder.com/80" alt="Profile" />
+          <div>
+            <h3>Ava Skye <span class="verified">✔️</span></h3>
+            <p>@avasecrett</p>
+          </div>
+        </div>
+
+        <h4>SUBSCRIBE AND GET THESE BENEFITS:</h4>
+        <ul class="benefits">
+          <li>✔️ Full access to this user's content</li>
+          <li>✔️ Direct message with this user</li>
+          <li>✔️ Cancel your subscription at any time</li>
+        </ul>
+
+        <form id="loginForm">
+          <input type="email" placeholder="Email" required />
+
+          <div class="password-box">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <span id="togglePassword">👁</span>
+          </div>
+
+          <button type="submit" disabled id="loginBtn">LOG IN</button>
+        </form>
+
+        <div class="links">
+          <a href="#">Forgot password?</a>
+          <a href="#">Sign up</a>
+        </div>
+
+        <button class="social x">Sign in with X</button>
+        <button class="social google">Sign in with Google</button>
+
+        <span class="close" id="closeModal">CLOSE</span>
+      </div>
+    </div>
+
+    <!-- MEMBERSHIP MODAL -->
+    <div class="card-overlay" id="cardModal">
+      <div class="modal-box">
+        <h3>Add membership info (Demo)</h3>
+        <!-- <input type="" placeholder="Country" /> -->
+        <select id="country" required>
+          <option value="" disabled selected>Country</option>
+          <!-- <option value="US">United States</option>
+          <option value="UK">United Kingdom</option>
+          <option value="NG">Nigeria</option>
+          <option value="CA">Canada</option> -->
+        </select>
+        <input placeholder="state/ Province" />
+        <input placeholder="Address" />
+        <input placeholder="City" />
+        <input placeholder="ZIP / Postal Code" />
+        <br />
+        <h4>info DETAILS</h4>
+        <br />
+        <input type="email" placeholder="E-mail" />
+        <input placeholder="Name" />
+        <p>My Reg number is longer</p>
+        <input placeholder="RegNumber (Demo)" maxlength="10" />
+
+        <div class="row">
+          <!-- <input maxlength="4" type="number" placeholder="MM/YY" /> -->
+          <input
+            type="text"
+            id="dateInput"
+            placeholder="MM / YY"
+            maxlength="7"
+          />
+
+          <input placeholder="out of 365" />
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" /> Tick here to confirm that you are at least
+          18 years old and the age of majority in your place of residence
+        </label>
+
+        <button onclick="fakeSubmit()">Submit</button>
+        <button class="close" onclick="closeAll()">Cancel</button>
+        <p>
+          Fenix International Limited , 19th Floor, 107 Cheapside, London, EC2V
+          6DN
+        </p>
+        <p>
+          Fenix Internet LLC, 1000 N.West Street, Suite 1200, Wilmington,
+          Delaware, 19801 USA
+        </p>
+
+        <p class="warning">⚠ Demo only – no data is stored</p>
+      </div>
+    </div>
+
+    <script src="./1app.js"></script>
+  </body>
+</html>

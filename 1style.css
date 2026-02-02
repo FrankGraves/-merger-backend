@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  /* height: 60rem; */
+  min-height: 100dvh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.33fr 0.41fr 1fr;
+  grid-template-areas:
+    " headerpfp "
+    "bio "
+    "subs ";
+}
+.headerpfp {
+  grid-area: headerpfp;
+  border: black solid 2px;
+  background-color: black;
+}
+.bio {
+  grid-area: bio;
+  border: red solid 2px;
+  padding: 10px;
+  position: relative;
+}
+
+.subs {
+  background-color: rgb(235, 238, 240);
+  grid-area: subs;
+  border: blue solid 2px;
+  position: relative;
+}
+
+.below {
+  width: 90%;
+  max-width: 500px;
+
+  height: 1.75rem;
+  /* width: 41.5rem; */
+  background-color: rgb(74, 166, 232);
+  /* margin-top: 10px;
+  margin-left: 17px;
+  margin-right: 10px; */
+  margin: 10px auto;
+  border-radius: 55px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px;
+}
+
+.pfname {
+  font-size: 20px;
+  font-weight: 1000;
+}
+.username {
+  color: gray;
+}
+.note {
+  position: absolute;
+  bottom: 10px;
+}
+#sub1 {
+  text-transform: uppercase;
+  color: grey;
+  padding: 10px;
+  background-color: white;
+}
+
+.sub1i {
+  position: absolute;
+  left: 25px;
+  bottom: 35%;
+  color: aliceblue;
+}
+.sub1ii {
+  position: absolute;
+  right: 30px;
+  color: aliceblue;
+  bottom: 35%;
+}
+.contents {
+  text-transform: uppercase;
+  margin-top: 10px;
+  position: relative;
+  width: 100;
+  height: 35px;
+  background-color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+.posts {
+  position: absolute;
+  left: 23%;
+  top: 50%;
+}
+.media {
+  position: absolute;
+  right: 23%;
+  top: 50%;
+}
+.subs2 {
+  height: 7rem;
+  width: 95%;
+  border: 0.5px solid rgb(202, 205, 207);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  text-transform: uppercase;
+  margin: 20px auto;
+  padding: 15px;
+}
+/* .subs2i {
+  height: 2rem;
+  width: 38rem;
+  background-color: rgb(74, 166, 232);
+  font-size: 14px;
+  align-content: center;
+  transform: translate(30px, 60px);
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+} */
+
+.subs2i {
+  width: 100%;
+  height: 2.5rem;
+  transform: none;
+  margin-top: 10px;
+}
+.footer {
+  position: sticky;
+  bottom: 0;
+  height: 3rem;
+  width: 100%;
+  background-color: white;
+}
+.home {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+.option {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+/*  */
+body {
+  min-height: 100dvh;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+
+  /* padding: 40px; */
+}
+
+button {
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #fff;
+  width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+.verified {
+  color: #00aff0;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.benefits li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+form input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #ccc;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+}
+
+form button.active {
+  background: #00aff0;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.social {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  margin-top: 8px;
+  color: white;
+}
+
+.social.x {
+  background: #000;
+}
+
+.social.google {
+  background: #4285f4;
+}
+
+.close {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* CARD MODAL OVERLAY */
+.card-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  align-items: center;
+  /* display: flex; */
+  justify-content: center;
+  /* overflow-y: auto; */
+}
+
+#country {
+  width: 95%;
+  height: 45px;
+  margin: 9px 0;
+}
+
+/* CARD BOX */
+.modal-box {
+  background: #fff;
+  color: #000;
+  max-width: 350px;
+  height: max-content;
+  margin: 80px auto;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-y: auto;
+  max-height: 70vh;
+
+  scrollbar-width: none;
+}
+
+/* .modal-box::-webkit-scrollbar {
+  width: 6px;
+} */
+
+.modal-box input {
+  width: 95%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons inside card modal */
+.modal-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #00aff0;
+  border: none;
+  color: white;
+  border-radius: 8px;
+}
+
+.modal-box .close {
+  background: #ccc;
+  color: #000;
+}
+
+.warning {
+  font-size: 12px;
+  color: red;
+  margin-top: 10px;
+}
+
+#openModal {
+  width: 100%;
+  border: none;
+  background: #00aff0;
+  color: white;
+  border-radius: 14px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+#openModal:hover {
+  opacity: 0.9;
+}
+
+.below {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub1i {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sub1ii {
+  font-size: 13px;
+  opacity: 0.9;
+}
+.checkbox {
+  border-radius: 50px;
+}
+
+@media (max-width: 480px) {
+  .pfname {
+    font-size: 16px;
+  }
+
+  .below {
+    font-size: 14px;
+  }
+
+  .subs2 {
+    bottom: unset;
+  }
+}
